@@ -7,7 +7,7 @@ This assignment composes of 4 exercises.
 - The analytical results for each exercise must be stored (gizipped) in **results/exerciseN**;
 - The plot produced must be stored in **plots**.
 
-### Exercise 0: Network Analysis
+## Exercise 0: Network Analysis
 
 The analysis can be performed either by using a visual tool (i.e., Cytoscape and Gephi) and/or the support of a programming language.
 The use of python ([networkx](https://networkx.github.io/) or [igraph](https://igraph.org/python/)) is not mandatory, although, strongly suggested. 
@@ -22,7 +22,7 @@ Network analysis must include at least:
 Moreover, the statistics computed on the crawled data must be compared with the ones of (i) random and (ii) preferential attachment graphs having the same
 number of nodes and edges.
 
-### Exercise 1-2: Analytical Tasks
+## Exercise 1-2: Analytical Tasks
 
 Each group must address at least **two** among the following tasks:
 
@@ -54,7 +54,7 @@ Partition each network in a training (80% of the edges) and a test set (20% of t
 social networks. CIKM 2003" (i.e. Common Neighbors, Adamic Adar, Jaccard, Preferential Attachment). 
 Discuss the prediction accuracy as done in the referenced paper.
 
-# Exercise 3: Open problem
+## Exercise 3: Open problem
 
 Define a research question on your data and use SNA tools to address it!
 
