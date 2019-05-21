@@ -52,25 +52,22 @@ Partition each network in a training (80% of the edges) and a test set (20% of t
 Discuss the prediction accuracy as done in the referenced paper. Implementation of unsupervied link prediction models can be found either in networkx or in [linkpred](https://github.com/rafguns/linkpred).
 
 6. **Link Prediction 2:**
-Following the same rationale of the previous exercise, build up a *supervised* approach to link prediction using a classifier.
+Following the same rationale of the previous exercise, build up a *supervised* approach(1) to link prediction using a classifier.
 Define the features, test the model(s), evaluate and discuss the results.
-- *Note:* this exercise requires knowledge of Data Mining tools and techniques.
 
 7. **Network Resilience:**
 Define a set of measures to compute tie strength and analyze the impact of strong/weak ties on the connectedness and resilience of the crawled network.
 
 8. **Graphlets**
-[Graphlets](https://en.wikipedia.org/wiki/Graphlets) are small, connected, non-isomorphic induced subgraphs of a large network. The size of a graphlet is the number of the nodes it is composed of: for a same size multiple graphlets may exist. 
-
-*Examples:* 
-- Size 2: a single graphlet exist among 2 nodes
-- Size 3: considering all the possible ways to connect 3 nodes, two different graphlets can be identified: the chain, the triangle.
-
+[Graphlets](https://en.wikipedia.org/wiki/Graphlets) are small, connected, non-isomorphic(2) induced subgraphs(3) of a large network. The size of a graphlet is the number of the nodes it is composed of: for a same size multiple graphlets may exist(4). 
 Define an approximate algorithm that allows to estimate the number of graphlets of size 3 and 4 and test it on your data. 
 Which are the most frequent graphlets? 
 
-- *Note 1:* an induced subgraph must contain all edges between its nodes that are present in the original network.
-- *Note 2:* graph isomorphism is an equivalence relation on graphs: two graphs *G* and *H* are said to be isomorphic if there exist a function *f* such that any two vertices *u* and *v* of *G* are adjacent in *G* if and only if *f(u)* and *f(v)* are adjacent in *H*. This kind of bijection is commonly described as "edge-preserving bijection". 
+*Note*
+- (1) This exercise requires knowledge of Data Mining tools and techniques.
+- (2) Graph isomorphism is an equivalence relation on graphs: two graphs *G* and *H* are said to be isomorphic if there exist a function *f* such that any two vertices *u* and *v* of *G* are adjacent in *G* if and only if *f(u)* and *f(v)* are adjacent in *H*. This kind of bijection is commonly described as "edge-preserving bijection".
+- (3) An induced subgraph must contain all edges between its nodes that are present in the original network.
+- (4) A single graphlet exists only among 2 nodes. Considering all the possible ways to connect 3 nodes, two different graphlets can be identified: the chain, the triangle.
 
 
 ## Exercise 3: Open problem
