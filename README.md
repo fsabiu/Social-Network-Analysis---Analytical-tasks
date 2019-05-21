@@ -9,8 +9,8 @@ This assignment composes of 4 exercises.
 
 ## Exercise 0: Network Analysis
 
-The analysis can be performed either by using a visual tool (i.e., Cytoscape and Gephi) and/or the support of a programming language.
-The use of python ([networkx](https://networkx.github.io/) or [igraph](https://igraph.org/python/)) is not mandatory, although, strongly suggested. 
+The analysis can either be performed by using a visual tool (i.e., Cytoscape/Gephi) and/or with the support of a programming language.
+The use of python libraries ([networkx](https://networkx.github.io/) or [igraph](https://igraph.org/python/)) is not mandatory, although, strongly suggested. 
  
 Network analysis must include at least:
 - Degree distribution analysis;
@@ -24,35 +24,54 @@ number of nodes and edges.
 
 ## Exercise 1-2: Analytical Tasks
 
-Each group must address at least **two** among the following tasks:
+Each group must address *at least* **two** among the following tasks:
 
 1. **Community Discovery:**
 Identify, evaluate and validate the modular structure of the crawled network sample. 
-The results of *K-clique*, *Label Propagation*, *Louvain*, and *Demon/Angel* must be evaluated and compared.
+The results of *K-clique*, *Label Propagation*, *Louvain*, and *Demon/Angel* must be evaluated and compared. 
 If additional semantic information for the analysed graph are present use them to make sense of the identified partitions.
-For CD algorithm implementations (as well as for their evaluation and comparison) refer to the [cdlib](https://github.com/GiulioRossetti/cdlib) library.
+For CD algorithm implementations (as well as for their evaluation and comparison) refer to the [CDlib](https://github.com/GiulioRossetti/cdlib) library.
 The analysis can be extended selecting approaches considered interesting among the one present in such library.
 
-2. **Tie Strength:**
-Define some strategies to compute tie strength and analyze the impact of strong/weak ties on the connectedness and resilience of the crawled
-network.
+2. **Community Discovery 2:**
+Define, implement and test either an existing or a novel Community Discovery approach not yet present in CDlib.
+For a list of well-known approaches refer to the Fortunato and Coscia's surveys.
 
 3. **Spreading:**
-Simulate, using the [ndlib](https://github.com/GiulioRossetti/ndlib) python library, the diffusion models discussed during the course (i.e., SI, SIS, SIR and Threshold model) both on the
-crawled data and on synthetic graphs (i.e., ER and BA).
+Simulate, using the [NDlib](https://github.com/GiulioRossetti/ndlib) python library, the diffusion models discussed during the course (i.e., SI, SIS, SIR and Threshold model) both on the crawled data and on synthetic graphs (i.e., ER and BA).
 Analyse the simulation results varying both model parameters and initial conditions (i.e., the infection seeds);
 
 4. **Spreading 2:** 
-Leveraging the Custom Model facility offered by [ndlib](https://github.com/GiulioRossetti/ndlib) design an ad-hoc, novel, diffusion model for the crawled graph. The model can be designed
-to take advantage of both network topological characteristics as well as external semantic information attached to nodes/edges (if present). 
+Leveraging the Custom Model facility offered by [ndlib](https://github.com/GiulioRossetti/ndlib) design an ad-hoc, novel, diffusion model for the crawled graph. The model can be designed to take advantage of both network topological characteristics as well as external semantic information attached to nodes/edges (if present). 
 Define your model so to solve a specific diffusion problem you consider interesting for your data. 
 The model can be either coded in python or expressed using NDQL. 
 Analyse the results varying both model parameters and initial conditions (i.e., the infection seeds);
 
 5. **Link Prediction:**
-Partition each network in a training (80% of the edges) and a test set (20% of the edges) and apply some of the classical unsupervised link prediction approaches introduced in "David Liben-Nowell, Jon M. Kleinberg: The link prediction problem for
-social networks. CIKM 2003" (i.e. Common Neighbors, Adamic Adar, Jaccard, Preferential Attachment). 
-Discuss the prediction accuracy as done in the referenced paper.
+Partition each network in a training (80% of the edges) and a test set (20% of the edges) and apply some of the classical unsupervised link prediction approaches introduced in "David Liben-Nowell, Jon M. Kleinberg: The link prediction problem for social networks. CIKM 2003" (i.e. Common Neighbors, Adamic Adar, Jaccard, Preferential Attachment). 
+Discuss the prediction accuracy as done in the referenced paper. Implementation of unsupervied link prediction models can be found either in networkx or in [linkpred](https://github.com/rafguns/linkpred).
+
+6. **Link Prediction 2:**
+Following the same rationale of the previous exercise, build up a *supervised* approach to link prediction using a classifier.
+Define the features, test the model(s), evaluate and discuss the results.
+- *Note:* this exercise requires knowledge of Data Mining tools and techniques.
+
+7. **Network Resilience:**
+Define a set of measures to compute tie strength and analyze the impact of strong/weak ties on the connectedness and resilience of the crawled network.
+
+8. **Graphlets**
+[Graphlets](https://en.wikipedia.org/wiki/Graphlets) are small, connected, non-isomorphic induced subgraphs of a large network. The size of a graphlet is the number of the nodes it is composed of: for a same size multiple graphlets may exist. 
+
+*Examples:* 
+- Size 2: a single graphlet exist among 2 nodes
+- Size 3: considering all the possible ways to connect 3 nodes, two different graphlets can be identified: the chain, the triangle.
+
+Define an approximate algorithm that allows to estimate the number of graphlets of size 3 and 4 and test it on your data. 
+Which are the most frequent graphlets? 
+
+- *Note 1:* an induced subgraph must contain all edges between its nodes that are present in the original network.
+- *Note 2:* graph isomorphism is an equivalence relation on graphs: two graphs *G* and *H* are said to be isomorphic if there exist a function *f* such that any two vertices *u* and *v* of *G* are adjacent in *G* if and only if *f(u)* and *f(v)* are adjacent in *H*. This kind of bijection is commonly described as "edge-preserving bijection". 
+
 
 ## Exercise 3: Open problem
 
