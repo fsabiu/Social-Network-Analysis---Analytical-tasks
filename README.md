@@ -25,7 +25,7 @@ For CD algorithm implementations (as well as for their evaluation and comparison
 The analysis can be extended selecting approaches considered interesting among the one present in such library.
 
 2. **Dynamic Community Discovery:**
-Generate, starting from your dataset, a series of snapshoots: to do so, for each snapshot (independently) select randomly 30% of the edges from the original network. After that: (i) partition the obtained dynamic network in communities implementing a *two-step* approach as discussed during the course (using a static CD algorithm of your choice) (ii) provide a simple definitions for the main community events (e.g., merge, split, growth, shrink), and (iii) analyze them. In case the crawled data contain temporal information you can avoid the random sampling and apply a temporal discretization of the original network.
+Generate, starting from your dataset, a series of snapshots: to do so, for each snapshot (independently) select randomly 30% of the edges from the original network. After that: (i) partition the obtained dynamic network in communities implementing a *two-step* approach as discussed during the course (using a static CD algorithm of your choice) (ii) provide a simple definitions for the main community events (e.g., merge, split, growth, shrink), and (iii) analyze them. In case the crawled data contain temporal information you can avoid the random sampling and apply a temporal discretization of the original network.
 
 ### Cluster 2: Diffusion
 
